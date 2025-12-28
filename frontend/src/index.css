@@ -164,3 +164,41 @@ textarea {
   padding: 5px;
   box-sizing: border-box;
 }
+
+/* SweetAlert2 custom theme */
+.swal2-popup {
+  background: var(--panel);
+  color: var(--text);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.swal2-title {
+  color: var(--text);
+  font-size: 18px;
+}
+
+.swal2-html-container {
+  color: var(--muted);
+}
+
+.swal2-confirm {
+  background: var(--accent) !important;
+  border-radius: 999px !important;
+  padding: 8px 20px !important;
+  font-weight: 600;
+}
+
+.swal2-confirm:hover {
+  background: var(--accent-hover) !important;
+}
+
+.swal2-icon.swal2-success {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.swal2-icon.swal2-warning {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
