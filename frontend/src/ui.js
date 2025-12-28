@@ -12,6 +12,11 @@ import { OutputNode } from './nodes/outputNode';
 import { TextNode } from './nodes/textNode';
 
 import 'reactflow/dist/style.css';
+import { MathNode } from './nodes/mathNode';
+import { SplitNode } from './nodes/SplitNode';
+import { TransformNode } from './nodes/transformNode';
+import { APINode } from './nodes/apiNode';
+import { MemoryNode } from './nodes/memoryNode';
 
 const gridSize = 20;
 const proOptions = { hideAttribution: true };
@@ -20,6 +25,11 @@ const nodeTypes = {
   llm: LLMNode,
   customOutput: OutputNode,
   text: TextNode,
+  math: MathNode,
+  split: SplitNode,
+  transform: TransformNode,
+  request: APINode,
+  memory: MemoryNode,
 };
 
 const selector = (state) => ({
@@ -90,7 +100,7 @@ export const PipelineUI = () => {
 
     return (
         <>
-        <div ref={reactFlowWrapper} style={{width: '100wv', height: '70vh'}}>
+        <div ref={reactFlowWrapper} className="canvas">
             <ReactFlow
                 nodes={nodes}
                 edges={edges}
